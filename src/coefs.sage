@@ -15,7 +15,7 @@ def result(t):
     ans = solve(blist[t] == B.coefficient(x**t), colist[t])[0]
     return ans.rhs()
 
-
+n = 6
 alist = [ var('a'+str(k)) for k in range(n) ]
 alist[0] = 0
 A(x) = sum(alist[k] * x^k for k in range(n))
@@ -24,3 +24,10 @@ y = A(A(x)).expand()
 outlist = y.coefficients(x)
 for j in range(n):
     print outlist[j]
+
+
+
+
+def dot(alist, blist):
+    n = len(alist)
+    return sum(alist[k]*blist[k] for k in range(n))
