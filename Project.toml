@@ -1,0 +1,15 @@
+name = "HalfSine"
+uuid = "3d846717-f972-558e-b651-78fc491a57cb"
+
+[deps]
+BigCombinatorics = "7b33fef7-ef1d-5d54-bb67-cf96d4c8a166"
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
+
+[compat]
+julia = "≥ 0.7.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
