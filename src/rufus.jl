@@ -20,19 +20,34 @@ end
 
 hs2(x) = hs(hs(x))
 
+
+function coord_axes(x1,x2,y1,y2)
+    draw_vector(x1,0,color=:black,linewidth=0.5)
+    draw_vector(x2,0,color=:black,linewidth=0.5)
+    draw_vector(0,y1,color=:black,linewidth=0.5)
+    draw_vector(0,y2,color=:black,linewidth=0.5)
+end
+
 function make_picture()
-    plot(hs,-4pi,4pi,aspect_ratio=1,legend=false,color=:black,ylims=(-1.5,2))
-    plot!(hs2,-4pi,4pi,color=:red)
+    plot(hs,-4pi,4pi,aspect_ratio=1,legend=false,color=:black)
+
+    coord_axes(-4.25pi,4.25pi,-2,1.5)
+    finish()
+    #plot!(hs2,-4pi,4pi,color=:red)
 end
 
 function make_picture_1()
-    x = -pi/2 : 0.01 : pi/2
+    x = -pi/2 : 0.05 : pi/2
     y = hs.(x)
 
-    plot(x,y,-pi/2,pi/2,aspect_ratio=1,legend=false, color=:black, linewidth=1.5)   
+    plot(x,y,aspect_ratio=1,legend=false, color=:black, linewidth=1.5)   
     draw_vector(-2,0,color=:black,linewidth=0.5)
     draw_vector(2,0,color=:black,linewidth=0.5)
     draw_vector(0,1.2,color=:black,linewidth=0.5)
     draw_vector(0,-1.7,color=:black,linewidth=0.5)
+
+    draw_segment(-pi/2,-0.1,-pi/2,0.1,color=:black,linewidth=0.5)
+    draw_segment(pi/2,-0.1,pi/2,0.1,color=:black,linewidth=0.5)
+
     finish()
 end
