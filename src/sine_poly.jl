@@ -1,4 +1,4 @@
-using Polynomials, BigCombinatorics
+using SimplePolynomials, BigCombinatorics
 
 
 function sine_coeffs(n::Int)
@@ -18,5 +18,5 @@ end
 (actually `2n-1` because `sin` is odd).
 """
 function sine_poly(n::Int)
-    return Poly(sine_coeffs(n))
+    return SimplePolynomial(sine_coeffs(n))
 end

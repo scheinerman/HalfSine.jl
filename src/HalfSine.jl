@@ -2,7 +2,10 @@
 
 module HalfSine
 
-using BigCombinatorics, Polynomials
+using BigCombinatorics, SimplePolynomials
+
+export semisine
+
 
 include("data.txt")  # get the b-values
 
