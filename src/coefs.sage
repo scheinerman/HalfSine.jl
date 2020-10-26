@@ -23,7 +23,7 @@ A(x) = sum(alist[k] * x^k for k in range(n))
 y = A(A(x)).expand()
 outlist = y.coefficients(x)
 for j in range(n):
-    print outlist[j]
+    print(outlist[j])
 
 
 
