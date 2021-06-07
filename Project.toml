@@ -8,7 +8,7 @@ SimplePolynomials = "cc47b68c-3164-5771-a705-2bc0097375a0"
 [compat]
 julia = "1"
 SimplePolynomials = "0.1, 0.2"
-BigCombinatorics = "0.2"
+BigCombinatorics = "0.2, 0.3"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
